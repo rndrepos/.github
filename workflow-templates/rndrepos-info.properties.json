@@ -1,0 +1,13 @@
+{
+    "name": "RndRepos Info Workflow",
+    "description": "RndRepos informational starter workflow.",
+    "iconName": "example-icon",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
