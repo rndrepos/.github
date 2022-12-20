@@ -1,7 +1,7 @@
 {
     "name": "RndRepos Info Workflow",
     "description": "RndRepos informational starter workflow.",
-    "iconName": "github",
+    "iconName": "settings",
     "categories": [
         "Go"
     ],
