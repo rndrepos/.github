@@ -1,2 +1,2 @@
 # .github
-Public repo for starter workflows
+Public repo for various centralized content such as starter workflows
