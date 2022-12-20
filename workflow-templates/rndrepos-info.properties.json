@@ -1,7 +1,7 @@
 {
     "name": "RndRepos Info Workflow",
     "description": "RndRepos informational starter workflow.",
-    "iconName": "settings",
+    "iconName": "check-square",
     "categories": [
         "Go"
     ],
