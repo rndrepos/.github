@@ -1,0 +1,21 @@
+name: RnDRepos Org Info
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: |
+          echo Info follows on ${{ github.repository }}
+          echo Default branch is $default-branch
+          echo Protected branch is $protected-branches
+          echo Random time is $cron-daily
