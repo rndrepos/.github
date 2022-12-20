@@ -3,11 +3,9 @@
     "description": "RndRepos informational starter workflow.",
     "iconName": "check-square",
     "categories": [
-        "Go"
+        "Text"
     ],
     "filePatterns": [
-        "package.json$",
-        "^Dockerfile",
-        ".*\\.md$"
+       "*.go"
     ]
 }
