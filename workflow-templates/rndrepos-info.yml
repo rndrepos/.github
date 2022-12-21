@@ -1,4 +1,4 @@
-name: RnDRepos Org Info
+name: Repo Info with context
 
 on:
   push:
@@ -13,9 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run a one-line script
+      - name: show brach info and GitHub context
         run: |
           echo Info follows on ${{ github.repository }}
           echo Default branch is $default-branch
-          echo Protected branch is $protected-branches
-          echo Random time is $cron-daily
+          echo "$GITHUB_CONTEXT"
+      - name: Dump job context
+        env: 
+          JOB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$JOB_CONTEXT"
+                
+   # add your jobs here     
