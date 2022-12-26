@@ -5,24 +5,25 @@ on:
     branches: [ $default-branch ]
   pull_request:
     branches: [ $default-branch ]
-    
+ 
+name: Repo Info with context
+
 jobs:
   info:
+  
     runs-on: ubuntu-latest
 
     steps:
             
       - uses: actions/checkout@v3
-
-      - name: show branch info and GitHub context
-        run: |
-          echo Info follows on ${{ github.repository }}
-          echo Default branch is "main"
-          echo Size of repository is `du -hs ${{ github.workspace }}`
           
-      - name: Dump job context
+      - name: Show repo info
         env: 
           GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+        run: |
+          echo Repository is ${{ github.repository }}
+          echo Size of local repository area is `du -hs ${{ github.workspace }}`
+          echo Context dump follows:
+          echo "$GITHUB_CONTEXT"
                 
-   # add your jobs here 
+   # add your jobs here   
