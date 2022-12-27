@@ -6,6 +6,6 @@
         "Text"
     ],
     "filePatterns": [
-       "*.go"
+       ".*\\.md$"
     ]
 }
